@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three-Body Problem Simulation</title>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.module.js",
+                "three/examples/jsm/controls/OrbitControls.js": "https://cdn.jsdelivr.net/npm/three@0.128.0/examples/jsm/controls/OrbitControls.js"
+            }
+        }
+    </script>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        canvas { display: block; }
+        #controls {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px;
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            border-radius: 5px;
+        }
+        .body-controls label {
+            display: block;
+            margin-top: 5px;
+        }
+        .body-controls input {
+            width: 50px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <h3>Body 1</h3>
+        <div class="body-controls" id="body1-controls">
+            <label>Position X: <input type="number" id="b1-posX"></label>
+            <label>Position Y: <input type="number" id="b1-posY"></label>
+            <label>Position Z: <input type="number" id="b1-posZ"></label>
+            <label>Velocity X: <input type="number" id="b1-velX"></label>
+            <label>Velocity Y: <input type="number" id="b1-velY"></label>
+            <label>Velocity Z: <input type="number" id="b1-velZ"></label>
+            <label>Mass: <input type="number" id="b1-mass"></label>
+        </div>
+
+        <h3>Body 2</h3>
+        <div class="body-controls" id="body2-controls">
+            <label>Position X: <input type="number" id="b2-posX"></label>
+            <label>Position Y: <input type="number" id="b2-posY"></label>
+            <label>Position Z: <input type="number" id="b2-posZ"></label>
+            <label>Velocity X: <input type="number" id="b2-velX"></label>
+            <label>Velocity Y: <input type="number" id="b2-velY"></label>
+            <label>Velocity Z: <input type="number" id="b2-velZ"></label>
+            <label>Mass: <input type="number" id="b2-mass"></label>
+        </div>
+
+        <h3>Body 3</h3>
+        <div class="body-controls" id="body3-controls">
+            <label>Position X: <input type="number" id="b3-posX"></label>
+            <label>Position Y: <input type="number" id="b3-posY"></label>
+            <label>Position Z: <input type="number" id="b3-posZ"></label>
+            <label>Velocity X: <input type="number" id="b3-velX"></label>
+            <label>Velocity Y: <input type="number" id="b3-velY"></label>
+            <label>Velocity Z: <input type="number" id="b3-velZ"></label>
+            <label>Mass: <input type="number" id="b3-mass"></label>
+        </div>
+        <button id="startButton">Start Simulation</button>
+        <button id="resetButton">Reset</button>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
